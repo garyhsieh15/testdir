@@ -20,6 +20,7 @@ def main():
     print("vim is a good editor")
     print("test register cmd")
     print("test color status")
+    print("test github status")
 
 if __name__ == "__main__":
     main()

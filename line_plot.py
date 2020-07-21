@@ -25,6 +25,7 @@ def main():
     print("test02 gighub status")
     print("test03 github status")
     print("test04 github status")
+    print("test05 github status")
 
 if __name__ == "__main__":
     main()

@@ -22,6 +22,7 @@ def main():
     print("test color status")
     print("test github status")
     print("test01 github status")
+    print("test02 gighub status")
 
 if __name__ == "__main__":
     main()

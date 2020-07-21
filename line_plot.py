@@ -21,6 +21,7 @@ def main():
     print("test register cmd")
     print("test color status")
     print("test github status")
+    print("test01 github status")
 
 if __name__ == "__main__":
     main()

@@ -2,6 +2,7 @@
 import numpy
 import class_ex
 import vector_matrix
+from scipy.optimize import newton as nt
 
 #    module          class       function           variable
 #from class_ex import MyCalClass, show_me_the_money, class_ex_a
@@ -15,7 +16,11 @@ import del_DataFrame
 import merge_DataFrame
 import sort_DataFrame
 import set_DataFrame
+#      package  module
 import draw.draw_pic
+#    package  module      function
+#from draw.draw_pic import draw_x2_func_curve
+import calc_newton
 
 # NG
 # import draw
@@ -99,15 +104,21 @@ if __name__ == "__main__":
     """
         print(set_DataFrame.calc_num_of_nan(set_DataFrame.set_data_frame_nan_cell(data, "name")))
     """
-    #print("draw.draw_pic.__name__:", dc.__name__)
-    #print("draw.draw_pic.__package__:", dc.__package__)
-    #print("draw.draw_pic.__file__:", dc.__file__)
+    """ draw pic
+        #print("draw.draw_pic.__name__:", dc.__name__)
+        #print("draw.draw_pic.__package__:", dc.__package__)
+        #print("draw.draw_pic.__file__:", dc.__file__)
 
-    # package  module  function
-    #draw.draw_pic.draw_scatter()
-    #draw_scatter()
-    #draw_pic.draw_scatter()
-    #dc.draw_scatter()
-    
-    #draw_color_line.draw_color()
-    draw.draw_pic.draw_continue_curve(100)
+        # package  module  function
+        #draw.draw_pic.draw_scatter()
+        #draw_scatter()
+        #draw_pic.draw_scatter()
+        #dc.draw_scatter()
+        
+        #draw_color_line.draw_color()
+        #draw.draw_pic.draw_continue_curve(100)
+    """
+
+    #print(nt(calc_newton.x2_function,0))
+    draw.draw_pic.draw_x2_func_curve()
+    #draw_x2_func_curve()

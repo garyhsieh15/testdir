@@ -2,10 +2,13 @@
 import numpy as np
 
 # numpy is a module, random is class, rd is member of function
-from numpy import random as rd
+#from numpy import random as rd
+from numpy import random
 #from matplotlib import pyplot as plt
 import matplotlib.pyplot as plt
 
+#import calc_newton
+#from .calc_newton import draw_x2_func_curve
 
 
 def draw_scatter():
@@ -77,10 +80,34 @@ def split_pic():
 
     plt.show()
 
+def draw_x2_func_curve():
+    x = np.arange(-10, 10)
+    plt.figure(figsize = (20, 6))
+    plt.plot(x, calc_newton.x2_function(x))
+    plt.grid(True)
+
+    plt.show()
+
+def draw_hist(_data, _num, _range):
+    #rd.seed(0)
+    random.seed(0)
+
+    #print("show _range:", _range)
+    plt.figure(figsize = (20, 6))
+    #plt.hist(rd.randn(10 ** 5) * 10 + 50, bins = 60, range = (20, 80))
+    plt.hist(_data, bins = _num, range = _range)
+
+    plt.grid(True)
+    plt.show()
+
 if __name__ == "__main__":
     print("enter draw pic main func")
     #draw_scatter()
-
     #draw_continue_curve()
+    #split_pic()
 
-    split_pic()
+    #data = rd.randn(10 ** 5) * 10 + 50
+    data = random.randn(10 ** 5) * 10 + 50
+    num = 60
+    range = (20, 80)
+    draw_hist(data, num, range)

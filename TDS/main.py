@@ -110,7 +110,10 @@ if __name__ == "__main__":
         #print("draw.draw_pic.__file__:", dc.__file__)
 
         # package  module  function
-        #draw.draw_pic.draw_scatter()
+    """
+    #draw.draw_pic.draw_scatter()
+    draw.draw_pic.draw_scatter()
+    """
         #draw_scatter()
         #draw_pic.draw_scatter()
         #dc.draw_scatter()
@@ -120,5 +123,5 @@ if __name__ == "__main__":
     """
 
     #print(nt(calc_newton.x2_function,0))
-    draw.draw_pic.draw_x2_func_curve()
+    #draw.draw_pic.draw_x2_func_curve()
     #draw_x2_func_curve()

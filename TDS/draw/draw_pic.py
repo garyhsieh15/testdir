@@ -2,8 +2,8 @@
 import numpy as np
 
 # numpy is a module, random is class, rd is member of function
-#from numpy import random as rd
-from numpy import random
+from numpy import random as rd
+#from numpy import random
 #from matplotlib import pyplot as plt
 import matplotlib.pyplot as plt
 

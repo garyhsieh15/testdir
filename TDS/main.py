@@ -112,15 +112,15 @@ if __name__ == "__main__":
         # package  module  function
     """
     #draw.draw_pic.draw_scatter()
-    draw.draw_pic.draw_scatter()
+    #draw.draw_pic.draw_scatter()
     """
         #draw_scatter()
         #draw_pic.draw_scatter()
         #dc.draw_scatter()
         
         #draw_color_line.draw_color()
-        #draw.draw_pic.draw_continue_curve(100)
     """
+    #draw.draw_pic.draw_continue_curve(100)
 
     #print(nt(calc_newton.x2_function,0))
     #draw.draw_pic.draw_x2_func_curve()

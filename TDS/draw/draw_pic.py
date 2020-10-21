@@ -50,6 +50,8 @@ def draw_continue_curve(_data_account):
     plt.plot(numpy_data_x, numpy_random_data_y, label = "gg")
     plt.plot(numpy_data_x * 1.6, numpy_random_data_y * 1.6, label = "ff")
     
+    #plt.scatter(numpy_data_x, numpy_random_data_y)
+
     #plt.plot(numpy_data_x, numpy_random_data_y)
     plt.legend()
 
@@ -100,6 +102,15 @@ def draw_hist(_data, _num, _range):
     plt.grid(True)
     plt.show()
 
+def draw_xxfunc():
+    x = np.arange(-10, 10)
+    plt.figure(figsize = (20, 6))
+
+    plt.plot(x, x ** 2 + 2 * x + 1)
+    plt.grid(True)
+
+    plt.show()
+
 if __name__ == "__main__":
     print("enter draw pic main func")
     #draw_scatter()
@@ -107,7 +118,10 @@ if __name__ == "__main__":
     #split_pic()
 
     #data = rd.randn(10 ** 5) * 10 + 50
+    """
     data = random.randn(10 ** 5) * 10 + 50
     num = 60
     range = (20, 80)
     draw_hist(data, num, range)
+    """
+    draw_xxfunc()

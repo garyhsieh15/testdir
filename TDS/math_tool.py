@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from sympy import *
 
 
-if __name__ == "__main__":
+def FEM00():
     print("enter main func")
 
     u = []
@@ -34,3 +34,35 @@ if __name__ == "__main__":
 
     print("show math.log(1): ", math.log(1))
     print("show math.log(2.71828): ", math.log(2.71828))
+
+def D_of_s00():
+    print("dynamic of structure")
+    #print("show exp(1): ", math.exp(1))
+    #print("show sin(3.1415926): ", math.sin(3.1415926))
+    
+    for damping_ratio in np.arange(0.00, 0.06, 0.01):
+        #damping_ratio = 0.05
+        damping_ratio_a = ( 1 - damping_ratio ** 2 ) ** 0.5
+        u = []
+        for x in np.arange(0, 20, 0.01):
+            temp = 2 * math.pi * x
+            y = ( 1 / damping_ratio_a ) * math.exp( -1 * damping_ratio * temp ) * math.sin( damping_ratio_a * temp )
+            u.append(y)
+        
+        plt.figure(figsize = (20, 6))
+        plt.plot(np.arange(0, 20, 0.01), u, label = "damping_ratio = " + str(damping_ratio))
+        
+        plt.grid(True)
+        plt.legend()
+        plt.xlabel("t/Tn")
+        plt.ylabel("u(t)/(u'(0))/Wn")
+
+    plt.show()
+
+     
+
+if __name__ == "__main__":
+    print("enter main function")
+    #FEM00()
+    D_of_s00()
+

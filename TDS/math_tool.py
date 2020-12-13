@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 from sympy import *
 
 
-def FEM00():
-    print("enter main func")
+def FEM_HW04():
+    print("enter FEM_HW04 func")
 
     u = []
     for x in np.arange(0, 1, 0.01):
@@ -34,6 +34,65 @@ def FEM00():
 
     print("show math.log(1): ", math.log(1))
     print("show math.log(2.71828): ", math.log(2.71828))
+
+def FEM_HW05_shear(): 
+    print("enter FEM_HW05 shear func")
+    
+    q = 1
+    L = 1
+
+    exact_V = []
+    for x in np.arange(0, 1.01, 0.01):
+        V = (-q/(4 * L**3)) * x**4 + ((q * L)/20) 
+        exact_V.append(V)
+        print("show x and V: ", x, V)
+
+    plt.figure(figsize = (20, 6))
+    plt.plot(np.arange(0, 1.01, 0.01), exact_V, label = "exact V")
+     
+    x_equilibrium = [0, 0.5, 1]
+    y_equilibrium = [1/20, 11/320, -1/5]
+    plt.plot(x_equilibrium, y_equilibrium, label = "equilibrium", linestyle = "--")
+
+    x_mathematical = [0, 0.5, 0.5, 1]
+    y_mathematical = [67001/1400000, 67001/1400000, -55751/1400000, -55751/1400000]
+    plt.plot(x_mathematical, y_mathematical, label = "mathematical", linestyle = "-.")
+    
+    plt.grid(True)
+    plt.legend()
+    plt.xlabel("x-dir")
+    plt.ylabel("shear force")
+
+    plt.show()
+
+def FEM_HW05_moment():
+    print("enter FEM HW05 moment func") 
+    q = 1
+    L = 1
+
+    exact_M = []
+    for x1 in np.arange(0, 1.01, 0.01):
+        M = (-q/(20 * L**3)) * x1**5 + ((q * L)/20) * x1
+        exact_M.append(M)
+
+    plt.figure(figsize = (20, 6))
+    plt.plot(np.arange(0, 1.01, 0.01), exact_M, label = "exact M")
+    
+    x_equilibrium = [0, 0.5, 1]
+    y_equilibrium = [0, 3/128, 0]
+    plt.plot(x_equilibrium, y_equilibrium, label = "equilibrium", linestyle = "--")
+
+    x_mathematical = [0, 0.5, 0.5, 1]
+    y_mathematical = [2311/8400000, 101656/4200000, 43469/1400000, 31187/2800000]
+    plt.plot(x_mathematical, y_mathematical, label = "mathematical", linestyle = "-.")
+
+    plt.grid(True)
+    plt.legend()
+    plt.xlabel("x-dir")
+    plt.ylabel("moment force")
+
+    plt.show()
+
 
 def D_of_s00():
     print("dynamic of structure")
@@ -63,6 +122,8 @@ def D_of_s00():
 
 if __name__ == "__main__":
     print("enter main function")
-    #FEM00()
-    D_of_s00()
+    #FEM_HW04()
+    #D_of_s00()
+    FEM_HW05_shear()
+    #FEM_HW05_moment()
 
